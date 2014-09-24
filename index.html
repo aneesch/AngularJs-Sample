@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	
+	 <link rel="stylesheet" href="styles/myStyles.css">
+	 <link rel="stylesheet" href="styles/bootstrap.min.css">
+	
+	<body>
+		<div ng-app="myApp" ng-init="" ng-controller="myController">
+			
+			<p>{{"Hi " + firstName+" ,"}}</p>	
+			
+			<div ng-include="'index_myTable.htm'"></div>			
+			
+			<br>
+			
+			<div ng-include="'index_myForm.htm'"></div>	
+					
+		</div>		
+		
+		<script src="scripts/angular.min.js"></script>
+		<script src="scripts/myApp.js"></script>
+		<script src="scripts/myController.js"></script>
+	</body>
+</html>

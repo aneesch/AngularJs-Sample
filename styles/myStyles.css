@@ -1,0 +1,11 @@
+#loginForm{
+	border	: 1px dotted black;
+	width	: 400px;
+	padding	: 10px;
+}
+
+#tableContainer {
+	width	: 300px;
+	border	: 1px dotted grey;
+	padding	: 5px;
+}

@@ -1,0 +1,13 @@
+<p><input type="checkbox" ng-model="showTable">&nbsp;Show Table</p>
+
+ <div id="tableContainer" ng-show="showTable">
+	 <table class="table table-striped">
+		<thead>
+			<tr> <th>Name</th> <th>Country</th> </tr>
+		</thead>
+	  <tr ng-repeat="x in student | orderBy : 'name'">
+	    <td>{{ x.name }}</td>
+	    <td>{{ x.country | lowercase }}</td>
+	  </tr>
+	</table> 
+</div>
