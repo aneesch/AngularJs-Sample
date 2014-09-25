@@ -1,3 +1,33 @@
+
+body{
+	height	: 100vh ;
+}
+
+#bodyHeader {
+	height 	: 10% ;
+	background-color:#F8F8F8;
+	border	: 1px dotted black;
+}
+
+#container {
+	height 	: 90% ;
+}
+
+#leftNav {
+	float 	: left ;
+	width 	: 20% ;
+	height 	: 100% ;
+	background-color:#E0E0E0;
+}
+
+#content {
+	float  	: left ;
+	width	: 80% ;
+	height 	: 100% ;
+	padding	: 10px;
+	background-color:#F8F8F8;
+}
+
 #loginForm{
 	border	: 1px dotted black;
 	width	: 400px;

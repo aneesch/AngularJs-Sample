@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="styles/myStyles.css">
-	<link rel="stylesheet" href="styles/bootstrap.min.css">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="styles/myStyles.css">
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+	</head>
 	
 	<body>
-		<div ng-app="myApp">
-			
-			<ul class="nav">
-				<li><a href="#/home"> Home </a></li>
-		        <li><a href="#/about"> About Us </a></li>
-		    </ul>	
-		    
-		    <div ng-view></div>
 					
-		</div>		
+		<div id="bodyHeader"></div>
+		
+		<div id="container" ng-app="myApp">
+			<div id="leftNav">
+				<ul class="nav">
+					<li><a href="#/home"> Home </a></li>
+			        <li><a href="#/about"> About Us </a></li>
+				</ul>
+			</div>
+			<div id="content" ng-view>
+		</div>
+		
+		<div id="bodyFooter"></div>
 		
 		<script src="scripts/angular.js"></script>
 		<script src="app/myApp.js"></script>
 		<script src="app/controllers/myController.js"></script>
-		<script src="app/controllers/aboutController.js"></script>
-		
+		<script src="app/controllers/aboutController.js"></script>	
+			
 	</body>
 </html>
+
