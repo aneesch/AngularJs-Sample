@@ -14,5 +14,9 @@ sampleApp.controller("myController", function($scope,$http) {
 		
 	//$scope.$watch('user',function() {alert('Listener alert (watch) for username..!!');});	
 	
+	$scope.goSubmit = function(){
+		alert("Demo..");
+	}
+	
 	
 });
