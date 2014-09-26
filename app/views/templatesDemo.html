@@ -1,15 +1,19 @@
-<label>Search : </label> <input type="text" ng-model="elementNameKey">
+<label>Search : </label> <input type="text" ng-model="movieNameKey">
 <br><br>
 <table class="{{selectedTemplate.tableClass}}">
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th>Atomic Number</th>
-			<th>Weight</th>
+			<th>Year</th>
+			<th>Director</th>
 		</tr>
 	</thead>
-	<tr ng-repeat="element in chemicalElement|filter:{name:elementNameKey}" ng-include="selectedTemplate.url"></tr>
+	<tr ng-repeat="movie in movieList|filter:{name:movieNameKey}" ng-include="selectedTemplate.url" ng-click="setViewPanel(movie.name)"></tr>
 </table>
 
 <label>Change Template </label>
 <select ng-model="selectedTemplate" ng-options="template.name for template in templates"><select>
+
+<br><br>
+
+ <iframe style="width:800px;height:300px;" ng-show="selectedMovieUrl" ng-src="{{selectedMovieUrl}}" frameborder="0"></iframe> 

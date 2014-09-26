@@ -2,19 +2,24 @@
 sampleApp.controller("templateDemoController", function($scope,$http) {
     
 	$scope.templates = [
-		{name : 'atomDescTemplate1.html', url : 'app/views/elementDesc.html', tableClass : 'table table-striped table-hover'},
-		{name : 'atomDescTemplate2.html', url : 'app/views/elementDesc2.html', tableClass : 'table table-bordered'}
+		{name : 'movieDescTemplate1.html', url : 'app/views/movieDesc.html', tableClass : 'table table-bordered table-striped table-hover'},
+		{name : 'movieDescTemplate2.html', url : 'app/views/movieDesc2.html', tableClass : 'table table-bordered'}
 	];
 	
 	$scope.template = $scope.templates[0];
 	
-	$scope.chemicalElement = [
-		{name : 'Hydrogen',atomicNumber : 1, atomicWeight : 1.00794 },
-		{name : 'Helium',atomicNumber : 2, atomicWeight : 4.002602 },
-		{name : 'Lithium',atomicNumber : 3, atomicWeight : 6.941 }
+	$scope.movieList = [
+		{name : 'The Counselor',year : 2013, director : 'Ridley Scott' },
+		{name : 'Eraserhead',year : 1977, director : 'David Lynch' },
+		{name : 'To the Wonder',year : 2012, director : 'Terrence Malick' }
 	];
 	
-	$scope.elementNameKey = "" ;
+	$scope.movieNameKey = "" ;
+	$scope.selectedMovieUrl = "";
 	$scope.selectedTemplate = $scope.template;
+	
+	$scope.setViewPanel = function(d){
+		$scope.selectedMovieUrl = 'http://en.wikipedia.org/wiki/'+d;
+	}
 	
 });
